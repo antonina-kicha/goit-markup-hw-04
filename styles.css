@@ -3,7 +3,6 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --text-on-background: #ffffff;
-  --background-color: #f5f4fa;
 
   --width-container: 1200px;
 }
@@ -11,6 +10,9 @@
 /* ===============================================
 ЧАСТИЧНЫЙ СБРОС СТИЛЕЙ
 ================================================== */
+/* body {
+  margin: 0;
+} */
 
 h1,
 h2,
@@ -108,6 +110,12 @@ HEADER
   align-items: center;
   gap: 50px;
 }
+
+/* .site-nav .item:not(:last-child),
+.contact-nav .item:not(:last-child) {
+  margin-right: 50px;
+} */
+
 .site-nav .link,
 .contact-nav .link {
   display: block;
@@ -128,26 +136,11 @@ HEADER
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
-.wrapper-contact:hover,
-.wrapper-contact:focus {
+.contact-nav .link:hover,
+.contact-nav .link:focus {
   color: var(--accent-color);
 }
 
-.wrapper-contact {
-  display: flex;
-  gap: 10px;
-  align-items: baseline;
-}
-.wrapper-contact.center {
-  align-items: center;
-}
-
-.contact-nav .link {
-  color: currentColor;
-}
-.contact-icon {
-  fill: currentColor;
-}
 /* ===============================================
 ОБЩЕЕ ДЛЯ СЕКЦИЙ
 ================================================== */
@@ -168,14 +161,11 @@ HEADER
   padding-top: 94px;
 }
 
-.sectoin-work,
-.section-team,
 .last-section {
   padding-bottom: 94px;
 }
 .header,
 .hero,
-.section-team,
 .footer {
   max-width: 1600px;
   margin-left: auto;
@@ -183,50 +173,11 @@ HEADER
 }
 
 /* ===============================================
-Общее оформление иконок и изображений
-================================================== */
-
-.list-socialmedia {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 16px;
-  gap: 10px;
-}
-
-.link-socialmedia {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: #afb1b8;
-}
-.link-socialmedia:hover,
-.link-socialmedia:focus {
-  background-color: var(--accent-color);
-}
-
-.icon-socialmedia {
-  fill: currentColor;
-}
-.link-socialmedia:hover,
-.link-socialmedia:focus {
-  color: #ffffff;
-}
-/* ===============================================
 HERO
 ================================================== */
 
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/imagesmain/hero.jpg);
-  background-color: #c4c4c4;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
+  background-color: #2f303a;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -268,23 +219,9 @@ HERO
 }
 
 /* ===============================================
-SECTION  "ПРЕИМУЩЕСТВА"
+SECTION  "ОСОБЕННОСТИ"
 ================================================== */
-.wrapper-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  width: 270px;
-  height: 120px;
-  background-color: var(--background-color);
-
-  margin-bottom: 30px;
-}
-
-.features-img {
-  background-color: var(--background-color);
-}
 .section-features {
   font-size: 14px;
 }
@@ -296,7 +233,9 @@ SECTION  "ПРЕИМУЩЕСТВА"
 .section-features .item {
   flex-basis: calc((100% - (3 * 30px)) / 4);
 }
-
+/* .section-features .item:not(:last-child) {
+  margin-right: 30px;
+} */
 .section-features .subtitle {
   margin-bottom: 10px;
 
@@ -317,15 +256,17 @@ SECTION  "ЧЕМ ЗАНИМАЕМСЯ"
   display: flex;
   gap: 30px;
 }
-
+/* .sectoin-work .item:not(:last-child) {
+  margin-right: 30px;
+} */
 /* ===============================================
 SECTION  "КОМАНДА"
 ================================================== */
 
 .section-team {
-  background-color: var(--background-color);
+  background-color: #f5f4fa;
 }
-.section-team .list-team {
+.section-team .list {
   display: flex;
   gap: 30px;
 }
@@ -335,6 +276,10 @@ SECTION  "КОМАНДА"
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+/* .section-team .item:not(:last-child) {
+  margin-right: 30px;
+} */
 
 .card-team {
   padding-top: 30px;
@@ -357,44 +302,16 @@ SECTION  "КОМАНДА"
 }
 
 /* ===============================================
-SECTION  "ПОСТОЯННЫЕ КЛИЕНТЫ"
-================================================== */
-.list-clients {
-  display: flex;
-  gap: 30px;
-}
-.link-client {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  color: #afb1b8;
-}
-.client-logo {
-  fill: currentColor;
-}
-.link-client:hover,
-.link-client:focus {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-/* ===============================================
 FOOTER
 ================================================== */
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: #2f303a;
 }
 
-.container-footer {
-  display: flex;
-  justify-content: flex-start;
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer a {
   font-style: normal;
@@ -422,29 +339,7 @@ FOOTER
 .footer .tel {
   color: rgb(255, 255, 255, 0.6);
 }
-.footer-contact {
-  margin-right: 70px;
-}
-.follow p {
-  padding-top: 12px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 
-  color: #ffffff;
-}
-
-.follow .link-socialmedia {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.follow .link-socialmedia:hover,
-.follow .link-socialmedia:focus {
-  color: #ffffff;
-  background-color: var(--accent-color);
-}
 /* ===============================================
 СТРАНИЦА PORTFOILIO
 ================================================== */
@@ -459,6 +354,15 @@ FOOTER
 
   margin-bottom: 50px;
 }
+
+/* .filtr .item:not(:last-child) {
+  margin-right: 8px;
+} */
+
+/* .worklist {
+  margin: -15px;
+} */
+
 .portfolio .worklist-list {
   display: flex;
   flex-wrap: wrap;
@@ -473,7 +377,7 @@ FOOTER
   font-size: 16px;
   line-height: 1.62;
   color: var(--title-text-color);
-  background-color: var(--background-color);
+  background-color: #f5f4fa;
   cursor: pointer;
 }
 .btn-filtr:hover,
@@ -502,6 +406,7 @@ FOOTER
 }
 .worklist-list .item {
   flex-basis: calc((100% - 2 * 30px) / 3);
+  /* margin: 15px; */
 }
 
 .worklist-list .item:hover,
