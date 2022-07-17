@@ -106,6 +106,10 @@ HEADER
 .contact-nav {
   display: flex;
   align-items: center;
+}
+
+.site-nav,
+.contact-nav {
   gap: 50px;
 }
 .site-nav .link,
@@ -123,16 +127,12 @@ HEADER
 .contact-nav {
   margin-left: auto;
 }
-.contact-nav .link {
-  color: var(--main-text-color);
-}
 .site-nav .link:hover,
 .site-nav .link:focus,
-.wrapper-contact:hover,
-.wrapper-contact:focus {
+.link.link-contact:focus,
+.link.link-contact:hover {
   color: var(--accent-color);
 }
-
 .wrapper-contact {
   display: flex;
   gap: 10px;
@@ -173,10 +173,9 @@ HEADER
 .last-section {
   padding-bottom: 94px;
 }
-.header,
-.hero,
-.section-team,
-.footer {
+/* .header, */
+.hero
+/* .footer  */ {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -341,6 +340,7 @@ SECTION  "КОМАНДА"
   padding-bottom: 30px;
 
   border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
 
   font-size: 16px;
   line-height: 1.19;
